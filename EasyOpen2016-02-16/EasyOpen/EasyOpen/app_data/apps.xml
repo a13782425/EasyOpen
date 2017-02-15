@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<app>
+  <apps fullpath="C:\Program Files (x86)\SogouInput\SogouExe\SogouExe.exe" icopath="F:\vstest\2013\EasyOpen\EasyOpen\icon\SogouExe.ico">SogouExe.exe</apps>
+  <apps fullpath="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" icopath="F:\vstest\2013\EasyOpen\EasyOpen\icon\chrome.ico">chrome.exe</apps>
+</app>

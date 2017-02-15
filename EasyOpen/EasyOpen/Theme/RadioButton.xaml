@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:MahApps.Metro.Controls"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <SolidColorBrush x:Key="BorderBrushColor" Color="#FF0017FF"/>
+    <SolidColorBrush x:Key="SelectColor" Color="Black"/>
+
+    <Style TargetType="RadioButton" x:Key="MyRadioButton">
+        <Setter Property="Background" Value="{DynamicResource WhiteBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border x:Name="MyBorder" Background="Transparent" BorderThickness="3" BorderBrush="Transparent" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Grid x:Name="MyGrid" Height="26" Width="26" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Rectangle x:Name="Border" Margin="2"  Fill="{TemplateBinding Background}" ></Rectangle>
+                                <Rectangle x:Name="CheckArea" Margin="0"></Rectangle>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="MyGrid" Property="Height" Value="28"></Setter>
+                            <Setter TargetName="MyGrid" Property="Width" Value="28"></Setter>
+                            <Setter TargetName="MyBorder" Property="BorderBrush" Value="{DynamicResource SelectColor}"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="false">
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="MyGrid" Property="Height" Value="28"></Setter>
+                            <Setter TargetName="MyGrid" Property="Width" Value="28"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

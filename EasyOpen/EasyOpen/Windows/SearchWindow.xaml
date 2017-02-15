@@ -1,0 +1,31 @@
+﻿<controls:MetroWindow x:Name="EasyOpenSearchWindows" x:Class="EasyOpen.SearchWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      Title="搜索" 
+                      BorderBrush="{DynamicResource AccentColorBrush}" 
+                      TitleCharacterCasing="Normal" 
+                      IsTabStop="False"
+                      Height="80" 
+                      Width="300"
+                      WindowStyle="ToolWindow" 
+                      ResizeMode="NoResize" 
+                      WindowStartupLocation="CenterScreen" 
+                      Topmost="True" 
+                      TitlebarHeight="20" 
+                      FontSize="10">
+    <Grid>
+
+        <controls:DropDownButton 
+            VerticalContentAlignment="Center"    
+            Content="Test"  
+            DisplayMemberPath="Title" Margin="0,0,136,0">
+            <controls:DropDownButton.Items>
+                <controls:SplitButton Icon="">
+                   
+                </controls:SplitButton>
+            </controls:DropDownButton.Items>
+        </controls:DropDownButton>
+        <TextBox HorizontalAlignment="Right" Width="131"></TextBox>
+    </Grid>
+</controls:MetroWindow>

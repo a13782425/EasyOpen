@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="EasyOpen.Control.EasyOpenViewItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            
+             mc:Ignorable="d" Height="72" Width="72" >
+    <Grid Cursor="Hand" MouseEnter="MyListViewItem_MouseEnter" MouseLeave="MyListViewItem_MouseLeave" >
+        <Grid.ToolTip>
+            <BulletDecorator>
+                <!--表示用来将项目符号与其他可视化对象对齐的布局控件。-->
+                <TextBlock x:Name="GridToolTip" Text=""></TextBlock>
+            </BulletDecorator>
+        </Grid.ToolTip>
+        <controls:Tile x:Name="TileContainer" TiltFactor="2"
+                   Title=""
+                   Width="Auto" 
+                   Height="Auto" 
+                   Grid.Column="1"
+                   HorizontalTitleAlignment="Left"
+                   Grid.Row="0" 
+                   TitleFontSize="12" 
+                   HorizontalContentAlignment="Left" 
+                   VerticalContentAlignment="Bottom" 
+                   Margin="1" IsTabStop="False">
+        </controls:Tile>
+        <Rectangle Width="32" Height="32" VerticalAlignment="Top" Margin="0,10,0,0" >
+            <Rectangle.Fill>
+                <ImageBrush  x:Name="HeadImage" Stretch="None" />
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+
+    <!--<Grid x:Name="MyListViewItem" Width="64" Height="64" Cursor="Hand" MouseEnter="MyListViewItem_MouseEnter" MouseLeave="MyListViewItem_MouseLeave" Background="Transparent">
+        <Image x:Name="HeadImage1" Height="32" Margin="0" Width="32" VerticalAlignment="Top"/>
+        <Label x:Name="AppName" Content="我和你" Margin="0,37,0,0" Height="27" Width="64" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
+            <Label.Background>
+                <ImageBrush/>
+            </Label.Background>
+        </Label>
+
+    </Grid>-->
+</UserControl>
+    
+    
