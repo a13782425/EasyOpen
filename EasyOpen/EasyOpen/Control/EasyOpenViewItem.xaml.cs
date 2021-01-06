@@ -75,7 +75,7 @@ namespace EasyOpen.Control
                 _systemStaticData = value;
                 this.SetAppName(_systemStaticData.ShowName);
                 MemoryStream ms = new MemoryStream();
-                EasyOpen.Properties.Resources.ie.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                DataUtils.GetBitmap(_systemStaticData.IconName).Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                 this.SetImage(ms);
                 //ms.Close();
                 //ms.Dispose();

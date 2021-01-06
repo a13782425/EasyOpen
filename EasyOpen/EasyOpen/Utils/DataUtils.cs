@@ -1,5 +1,6 @@
 ﻿using EasyOpen.Control;
 using EasyOpen.Model;
+using EasyOpen.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,7 +65,7 @@ namespace EasyOpen.Utils
             }
         }
 
-        public static Dictionary<string, string> ThemeDic = new Dictionary<string, string>() 
+        public static Dictionary<string, string> ThemeDic = new Dictionary<string, string>()
         {
             { Amber, "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Amber.xaml" },
             { BaseDark, "pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml" },
@@ -93,6 +94,11 @@ namespace EasyOpen.Utils
             { Yellow, "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Yellow.xaml" },
         };
 
+        public static System.Drawing.Bitmap GetBitmap(string str)
+        {
+            object obj = Resources.ResourceManager.GetObject(str, Resources.Culture);
+            return ((System.Drawing.Bitmap)(obj));
+        }
 
     }
 }

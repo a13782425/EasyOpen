@@ -36,8 +36,8 @@
                VerticalAlignment="Top"
                Margin="0,10,0,0">
       <Rectangle.Fill>
-        <ImageBrush  x:Name="HeadImage"
-                     Stretch="None" />
+        <ImageBrush x:Name="HeadImage"
+                     Stretch="Fill" />
       </Rectangle.Fill>
     </Rectangle>
   </Grid>
